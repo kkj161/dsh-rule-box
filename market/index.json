@@ -1,0 +1,92 @@
+{
+  "format": 1,
+  "title": {
+    "en": "Rule Box",
+    "zh": "规则盒"
+  },
+  "description": {
+    "en": "Rules for DSH: always-on ones, or ones that only kick in when you write a bracketed command.",
+    "zh": "给 DSH 装规则的盒子：一条规则要么全局常驻，要么只有写「（命令 A）」时才生效。"
+  },
+  "metadata": {
+    "categories": {
+      "prompt": {
+        "title": {
+          "en": "Prompts & rules",
+          "zh": "提示词与规则"
+        }
+      }
+    },
+    "labels": {
+      "rules": {
+        "title": {
+          "en": "Rules",
+          "zh": "规则"
+        }
+      },
+      "open-source": {
+        "title": {
+          "en": "Open source",
+          "zh": "开源"
+        }
+      }
+    },
+    "sortKeys": {
+      "stars": {
+        "title": {
+          "en": "Stars",
+          "zh": "星标"
+        },
+        "order": "desc"
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "dsh-rule-box",
+      "title": {
+        "en": "Rule Box",
+        "zh": "规则盒"
+      },
+      "description": {
+        "en": "Two ways for a rule to apply: global (every turn) or summoned by a bracketed command. Each rule has a toggle on the settings page; summoned rules stay out of the prompt until you call them.",
+        "zh": "规则有两种生效方式：全局（每轮都在）或者写括号命令才召唤。设置页可以逐条开关；召唤规则不召唤时不占提示词。"
+      },
+      "icon": "icons/rule-box.svg",
+      "metadata": {
+        "category": "prompt",
+        "keywords": [
+          "rules",
+          "规则",
+          "prompt",
+          "summon"
+        ],
+        "labels": [
+          "rules",
+          "open-source"
+        ],
+        "sortKeys": {
+          "stars": 0
+        }
+      },
+      "versions": [
+        {
+          "version": "0.2.0",
+          "publishTimestamp": 1793471903,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/kkj161/dsh-rule-box",
+            "commit": "655d056af516db377448c9c03d738c610f2361ad"
+          },
+          "engines": {
+            "dsh": ">=0.2.1-rc.5"
+          }
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/kkj161/dsh-rule-box"
+      },
+      "homepage": "https://github.com/kkj161/dsh-rule-box"
+    }
+  ]
+}
