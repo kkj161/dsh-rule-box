@@ -1,0 +1,52 @@
+{
+  "name": "dsh-rule-box",
+  "version": "0.2.0",
+  "description": "规则盒：往一个插件里加规则，每条各选一种生效方式——全局常驻，或者只有写「（命令 A）」时才生效；设置页可逐条开关",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "rules",
+    "prompt"
+  ],
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": {
+      "default": "./lib/index.js"
+    },
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "test": "node --test test/rules.test.mjs"
+  },
+  "os": [
+    "win32",
+    "darwin",
+    "linux"
+  ],
+  "license": "MIT"
+}
