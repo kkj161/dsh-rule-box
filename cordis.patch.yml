@@ -1,0 +1,9 @@
+# dsh-rule-box 自带的一行 loader patch，装好后由 package.json 的
+# dsh.bundle.patch 自动套用。不要再去 profiles/<name>/cordis.patch.yml
+# 里 insert 一遍，id 重复会让加载器起不来。
+
+- insert:
+    - id: rule-box
+      name: 'dsh-rule-box'
+      config:
+        enabled: true
